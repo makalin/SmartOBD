@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  smartobd:
+    build: .
+    container_name: smartobd
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./models:/app/models
+      - ./exports:/app/exports
+      - ./config.yaml:/app/config.yaml
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0  # For USB OBD-II adapters
+    networks:
+      - smartobd-network
+
+  # Optional: Add a database service for production
+  # postgres:
+  #   image: postgres:13
+  #   container_name: smartobd-db
+  #   environment:
+  #     POSTGRES_DB: smartobd
+  #     POSTGRES_USER: smartobd
+  #     POSTGRES_PASSWORD: smartobd_password
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - smartobd-network
+
+  # Optional: Add Redis for caching
+  # redis:
+  #   image: redis:6-alpine
+  #   container_name: smartobd-redis
+  #   networks:
+  #     - smartobd-network
+
+networks:
+  smartobd-network:
+    driver: bridge
+
+# volumes:
+#   postgres_data: 

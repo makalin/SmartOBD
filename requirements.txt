@@ -1,0 +1,85 @@
+# Core OBD-II communication
+pyserial==3.5
+obd==0.7.1
+python-obd==0.7.1
+
+# Data processing and analysis
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.11.1
+
+# Machine Learning
+scikit-learn==1.3.0
+tensorflow==2.13.0
+keras==2.13.1
+
+# Data visualization
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.15.0
+
+# Web framework and API
+flask==2.3.2
+flask-cors==4.0.0
+flask-socketio==5.3.4
+gunicorn==21.2.0
+
+# Database
+sqlalchemy==2.0.19
+alembic==1.11.1
+sqlite3
+
+# Configuration and environment
+pyyaml==6.0.1
+python-dotenv==1.0.0
+click==8.1.7
+
+# Notifications
+smtplib
+twilio==8.1.0
+pushbullet.py==0.12.0
+
+# Utilities
+requests==2.31.0
+schedule==1.2.0
+psutil==5.9.5
+colorama==0.4.6
+tqdm==4.65.0
+
+# Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+pytest-mock==3.11.1
+
+# Development tools
+black==23.7.0
+flake8==6.0.0
+mypy==1.5.1
+
+# Bluetooth communication (for OBD-II adapters)
+pybluez==0.23
+pyserial-asyncio==0.6
+
+# Async support
+asyncio
+aiohttp==3.8.5
+
+# Logging
+structlog==23.1.0
+
+# Security
+cryptography==41.0.3
+bcrypt==4.0.1
+
+# Date and time
+python-dateutil==2.8.2
+pytz==2023.3
+
+# JSON handling
+jsonschema==4.19.0
+
+# File handling
+pathlib2==2.3.7
+
+# System monitoring
+psutil==5.9.5 
